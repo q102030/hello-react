@@ -8,6 +8,10 @@ import { directive } from '@babel/types';
 
 class App extends Component {
   render(){
+  const user = {
+    name: "Anna",
+    hobbies:["sport","movie"]
+  }
   return (
     <div className="container">
     <div className="row">
@@ -17,7 +21,9 @@ class App extends Component {
     </div>
     <div className="row">
       <div className="col-xs-1 col-xs-offset-11">
-        <Home/>
+        <Home name={"Max"} age={"12"} user={user} >
+          <p> I'm child. </p>
+        </Home> 
       </div>
     </div>
     <div className="row">
